@@ -1,0 +1,71 @@
+id: MS-L001
+title: Перебор паролей SSH с одного IP
+severity: high
+type: threshold
+mitre: [T1110.001]
+description: 5+ неудачных входов по SSH с одного адреса за 2 минуты.
+condition:
+  source: linux_auth
+  event_type: logon_failure
+threshold:
+  group_by: [src_ip]
+  count: 5
+  window: 2m
+---
+id: MS-L002
+title: Password spraying по SSH
+severity: high
+type: threshold
+mitre: [T1110.003]
+description: С одного IP пробуют 4+ разных учётных записей за 10 минут — типичный подбор одного пароля к многим логинам.
+condition:
+  source: linux_auth
+  event_type: logon_failure
+threshold:
+  group_by: [src_ip]
+  count: 4
+  distinct: user
+  window: 10m
+---
+id: MS-L003
+title: Успешный вход после перебора паролей
+severity: critical
+type: sequence
+mitre: [T1110, T1078]
+description: После серии неудачных попыток с того же IP произошёл успешный вход — вероятная компрометация учётной записи.
+sequence:
+  after: MS-L001
+  join_on: src_ip
+  within: 30m
+condition:
+  event_type: logon_success
+---
+id: MS-L004
+title: Получение root-шелла через sudo
+severity: high
+type: match
+mitre: [T1548.003]
+description: Через sudo запущена командная оболочка или редактирование sudoers/passwd.
+condition:
+  event_type: sudo
+  command_line|re: '(/bin/(ba|z|da)?sh\b|su\s*(-|root)?$|visudo|/etc/(sudoers|shadow|passwd))'
+---
+id: MS-L005
+title: Создана новая учётная запись Linux
+severity: medium
+type: match
+mitre: [T1136.001]
+description: Новый локальный пользователь — проверить, согласовано ли создание.
+condition:
+  source: linux_auth
+  event_type: user_created
+---
+id: MS-L006
+title: Загрузка и запуск скрипта через sudo
+severity: high
+type: match
+mitre: [T1105, T1059.004]
+description: Через sudo выполнены curl/wget с передачей вывода в интерпретатор или запуск из /tmp.
+condition:
+  event_type: sudo
+  command_line|re: '((curl|wget)\b.*\|\s*(ba)?sh|/tmp/|/dev/shm/)'

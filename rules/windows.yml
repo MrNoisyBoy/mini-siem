@@ -1,0 +1,93 @@
+id: MS-W001
+title: Перебор паролей Windows
+severity: high
+type: threshold
+mitre: [T1110]
+description: 5+ событий 4625 (неудачный вход) для одной учётной записи за 5 минут.
+condition:
+  source: windows
+  event_type: logon_failure
+threshold:
+  group_by: [host, user]
+  count: 5
+  window: 5m
+---
+id: MS-W002
+title: Успешный вход после перебора (Windows)
+severity: critical
+type: sequence
+mitre: [T1110, T1078]
+description: После серии 4625 для той же учётной записи — успешный вход 4624.
+sequence:
+  after: MS-W001
+  join_on: user
+  within: 30m
+condition:
+  source: windows
+  event_type: logon_success
+---
+id: MS-W003
+title: Закодированная команда PowerShell
+severity: high
+type: match
+mitre: [T1059.001, T1027]
+description: PowerShell запущен с -EncodedCommand — частый приём сокрытия полезной нагрузки.
+condition:
+  event_type: process_creation
+  process|endswith: [powershell.exe, pwsh.exe]
+  command_line|re: '\s-(e|en|enc|enco|encod|encodedcommand)\s'
+---
+id: MS-W004
+title: Загрузка файла через PowerShell или certutil
+severity: high
+type: match
+mitre: [T1105]
+description: Download cradle (IWR, DownloadString, Net.WebClient) или certutil -urlcache.
+condition:
+  event_type: process_creation
+  command_line|re: '(downloadstring|downloadfile|invoke-webrequest|\biwr\b|net\.webclient|certutil.*-urlcache)'
+---
+id: MS-W005
+title: Создана учётная запись Windows
+severity: medium
+type: match
+mitre: [T1136.001]
+description: Событие 4720 — создан новый локальный или доменный пользователь.
+condition:
+  source: windows
+  event_type: user_created
+---
+id: MS-W006
+title: Пользователь добавлен в группу администраторов
+severity: critical
+type: match
+mitre: [T1098]
+description: Событие 4732 для группы Administrators/Администраторы — повышение привилегий.
+condition:
+  source: windows
+  event_type: group_member_added
+  extra.GroupName|in: [administrators, администраторы]
+---
+id: MS-W007
+title: Очищен журнал безопасности
+severity: critical
+type: match
+mitre: [T1070.001]
+description: Событие 1102 — злоумышленник заметает следы.
+condition:
+  source: windows
+  event_type: log_cleared
+---
+id: MS-W008
+title: Разведка учётных записей и групп
+severity: medium
+type: threshold
+mitre: [T1087, T1069]
+description: 3+ разведывательные команды (whoami, net user, net group, nltest) с одного хоста за 5 минут.
+condition:
+  event_type: process_creation
+  command_line|re: '(whoami|net1?(\.exe)?\s+(user|group|localgroup)|nltest|quser)'
+threshold:
+  group_by: [host]
+  count: 3
+  window: 5m
